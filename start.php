@@ -43,6 +43,23 @@ class Start extends Init{
         mysqli_query($this->connection, $query);
         return $this->select_from_guys();
     }
+
+    // +++++++++++++++ update function ++++++++++++
+
+    public $name;
+
+    function update_into_guys($id) {
+        $query= "UPDATE guys SET name= '$this->name' WHERE id=$id";
+
+        mysqli_query($this->connection, $query);
+        return $this->select_from_guys();
+    }
+
+
+
+     // +++++++++++++++ update function End ++++++++++++
+
+    
 }
 
 
